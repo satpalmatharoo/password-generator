@@ -1,125 +1,48 @@
+
+// Function namethefunction(){
+// alert ("password");
+//}
+
+
 //Generator functions
 var generateBtn = document.querySelector("#generate");
 
-//Array for upper case letters
-var upperCaseLetters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+//lower case letters
+var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz"
+var upperCaseLetters = lowerCaseLetters.toUpperCase();
+//special characters
+var specialCharacters = "&!-£%";
 
-//Array for lower case letters
-var lowerCaseArray = 
-[
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+//numbers 1-9
+var numbers = "123456789";
+var charset = lowerCaseLetters;
 
-//Array for special characters
-var specialCharacters = [
-""",
-"!",
-"#",
-"$",
-"%",
-"&",
-"'",
-"()",
-"*",
-"+",
-",",
-"-",
-"."
-"/",
-":",
-";"
-"<",
-"=",
-">",
-"?",
-"@",
-"[",
-"\",
-"]",
-"^",
-"_",
-"`",
-"{",
-"|",
-"}",
-"~",
-];
+// Declaring for future use
+function generatePassword (){
+  console.log (charaset);
+}
 
-//Array for numbers 1-9
-var numbers =[
-"1",
-"2",
-"3",
-"4",
-"5",
-"6",
-"7",
-"8",
-"9",
-];
+function generatePasswordCriteria (){
+// Get passsword length from user
+const passwordLength = prompt("How long would you like your password to be?  Your password needs to be between 7-128 characters");
+// Parse the password length we have got from the user
+ const passwordLengthParsed = Number.isNaN(passwordLengthParsed)) {
+   {
+     alert("Your password length must ")
+   }
+ }
+}
 
-//Declaring for future use
+// Declare variables; remember sqaure for j.arrays
 function generatePassword () {
 
   var isLowerCase;
   var isUpperCase;
   var isNumber;
   var isSpecialCharacters;
-  var optionsArray = [];
-  var resultsArray = [];
-  var password= [];
+  var optionsArray;
+  var resultsArray;
+  var password;
 }
 //Making a password length
 let passwordLength = prompt (
@@ -135,8 +58,8 @@ if (passwordLength < 8) {
   return;
 }
 
-//If conditions are met - generate password
-if (passwordLength >=8 && passwordLength <=128){
+//If conditions are met - generate the users password
+if (passwordLength >=8 and passwordLength <=128){
   isUpperCase
   console.log ("Please add Uppercase characters")
   isLowerCase
@@ -153,7 +76,7 @@ if (passwordLength >=8 && passwordLength <=128){
       optionsArray.push(lowerCaseArray); }
       if (isNumber) {
         optionsArray.push( numberArray); }
-        if (isSpecialCharacters) {
+        and (isSpecialCharacters) {
           optionsArray.push( specialcharactersArray); }
   }
 }
