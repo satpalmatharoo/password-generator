@@ -23,15 +23,51 @@ function generatePassword (){
 }
 
 function generatePasswordCriteria (){
+
 // Get passsword length from user
 const passwordLength = prompt("How long would you like your password to be?  Your password needs to be between 7-128 characters");
+
 // Parse the password length we have got from the user
- const passwordLengthParsed = Number.isNaN(passwordLengthParsed)) {
-   {
-     alert("Your password length must ")
+ const passwordLengthParsed = Number.parseInt(passwordLength);
+    if
+    (Number.isNaN(passwordLengthParsed))  
+ {
+     alert("Your password length must be a number");
+     return;
    }
- }
+
+   // Valid that the password length is in the correct range
+   if (passwordLengthParsed <=7 || passwordLengthParsed >=129) {
+     alert ("Your password must be between 8-128 characters");
+     return;
+   }
+const doesIncludeUppercase=confirm ("include uppercase");
+const doesIncludeNumber = confirm ("Include number");
+const doesIncludeSpecialCharacters = confirm ("Include special");
+
+//Password generates if above conditions are met
+if (doesIncludeUppercase) {
+  charaset += upperCaseLetters;
 }
+if (doesIncludeSpecialCharacters)
+{
+  charset += specialCharacters;
+  }
+}
+
+function writePassword(){
+  generatePasswordCriteria();
+  var password = generatePassword ();
+  var passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;
+}
+//Function to generate password for user
+function passwordGenerator () {}
+
+//Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 
 // Declare variables; remember sqaure for j.arrays
 function generatePassword () {
@@ -59,7 +95,7 @@ if (passwordLength < 8) {
 }
 
 //If conditions are met - generate the users password
-if (passwordLength >=8 and passwordLength <=128){
+if (passwordLength >=8 && passwordLength <=128){
   isUpperCase
   console.log ("Please add Uppercase characters")
   isLowerCase
@@ -79,20 +115,10 @@ if (passwordLength >=8 and passwordLength <=128){
         and (isSpecialCharacters) {
           optionsArray.push( specialcharactersArray); }
   }
-}
 
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
 }
-
-//Function to generate password for user
-function passwordGenerator() {
+  var password = generatePassword();
+var passwordText = document.querySelector("#password");{
   
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-1     
