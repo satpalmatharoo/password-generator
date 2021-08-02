@@ -62,11 +62,6 @@ function writePassword(){
   
   passwordText.value = password;
 }
-//Function to generate password for user
-function passwordGenerator () {}
-
-//Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 
 // Declare variables; remember sqaure for j.arrays
@@ -86,6 +81,7 @@ let passwordLength = prompt (
 );
 passwordLength = Number.parseInt(passwordLength)
 //Setting condition statements if/if/else if
+
 if (passwordLength < 8) {
   alert ("Your password must contain more than 7 characters.");
   return;
@@ -111,14 +107,33 @@ if (passwordLength >=8 && passwordLength <=128){
     if (isLowerCase) {
       optionsArray.push(lowerCaseArray); }
       if (isNumber) {
-        optionsArray.push( numberArray); }
-        and (isSpecialCharacters) {
+        optionsArray.push(numberArray); }
+        and (isSpecialCharacters) 
           optionsArray.push( specialcharactersArray); }
-  }
+  
 
 function writePassword() {
 }
-  var password = generatePassword();
+var password = generatePassword();
 var passwordText = document.querySelector("#password");{
   
 }
+
+//Function to generate password for user
+function passwordGenerator () {
+  const randomIndex = Maths.floor(Math.random() * optionsarray.passwordLength);
+  const randomChoice = optionsArray (randomIndex);
+
+  return randomChoice;
+}
+//For Loop
+for (let i =0; i < passwordLength; i++) {
+  let randomResult = randomPasswordGenerator();
+  result.push(randomResult);
+}
+password = result.join("");
+return password;
+
+//Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
