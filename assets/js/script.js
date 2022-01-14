@@ -1,9 +1,3 @@
-
-// Function namethefunction(){
-// alert ("password");
-//}
-
-
 //Generator functions
 var generateBtn = document.querySelector("#generate");
 
@@ -16,31 +10,36 @@ var specialCharacters = "&!-£%";
 //numbers 1-9
 var numbers = "123456789";
 var charset = lowerCaseLetters;
-
-// Declaring for future use
-function generatePassword (){
-  console.log (charaset);
+document.getElementById("generate").addEventListener("click",generatePasswordCriteria)
+function writePassword(){
+  generatePasswordCriteria();
+  var password = generatePassword ();
+  var passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;
 }
+
 
 function generatePasswordCriteria (){
 
 // Get passsword length from user
-const passwordLength = prompt("How long would you like your password to be?  Your password needs to be between 7-128 characters");
-
-// Parse the password length we have got from the user
- const passwordLengthParsed = Number.parseInt(passwordLength);
-    if
-    (Number.isNaN(passwordLengthParsed))  
+ let passwordLength = prompt (
+  "How long would you like your password to be? Your password needs to be between 7-128 characters"
+);
+  // Parse the password length we have got from the user
+  const passwordLengthParsed = Number.parseInt(passwordLength);
+if (passwordLengthParsed <=7 || passwordLengthParsed >=129) {
+  alert ("piggywiggy");
+  return;
+} 
+if   (Number.isNaN(passwordLengthParsed))  
  {
      alert("Your password length must be a number");
      return;
    }
 
    // Valid that the password length is in the correct range
-   if (passwordLengthParsed <=7 || passwordLengthParsed >=129) {
-     alert ("Your password must be between 8-128 characters");
-     return;
-   }
+   
 const doesIncludeUppercase=confirm ("include uppercase");
 const doesIncludeNumber = confirm ("Include number");
 const doesIncludeSpecialCharacters = confirm ("Include special");
@@ -53,18 +52,9 @@ if (doesIncludeSpecialCharacters)
 {
   charset += specialCharacters;
   }
-}
+ }
 
-function writePassword(){
-  generatePasswordCriteria();
-  var password = generatePassword ();
-  var passwordText = document.querySelector("#password");
-  
-  passwordText.value = password;
-}
-
-
-// Declare variables; remember sqaure for j.arrays
+// Declare variables;
 function generatePassword () {
 
   var isLowerCase;
@@ -76,64 +66,67 @@ function generatePassword () {
   var password;
 }
 //Making a password length
-let passwordLength = prompt (
-  "How long would you like your password to be? Your password needs to be between 7-128 characters"
-);
-passwordLength = Number.parseInt(passwordLength)
-//Setting condition statements if/if/else if
 
-if (passwordLength < 8) {
-  alert ("Your password must contain more than 7 characters.");
-  return;
-}else if (!passwordLength > 128)  {
-  alert ("Your password can have no more than 128 characters.");
-  return;
-}
+// let passwordLength = prompt (
+//   "How long would you like your password to be? Your password needs to be between 7-128 characters"
+// );
+// passwordLength = Number.parseInt(passwordLength)
+// //Setting condition statements if/if/else if
+
+// if (passwordLength < 8) {
+//   alert ("Your password must contain more than 7 characters.");
+  
+// }else if (!passwordLength > 128)  {
+//   alert ("Your password can have no more than 128 characters.");
+
+// }
 
 //If conditions are met - generate the users password
-if (passwordLength >=8 && passwordLength <=128){
-  isUpperCase
-  console.log ("Please add Uppercase characters")
-  isLowerCase
-  console.log ("Please add LowerCase characters")
-  isNumber
-  console.log ("Please add a Number")
-  isSpecialCharacters
-  console.log ("Please add a Special Character")
+// if (passwordLength >=8 && passwordLength <=128){
+//   isUpperCase ()
+//   console.log ("Please add Uppercase characters")
+//   isLowerCase
+//   console.log ("Please add LowerCase characters")
+//   isNumber
+//   console.log ("Please add a Number")
+//   isSpecialCharacters
+//   console.log ("Please add a Special Character")
 
-  //Password generates if above conditions are met
-  if (isUppercase) {
-    optionsArray.push(upperCaseArray); }
-    if (isLowerCase) {
-      optionsArray.push(lowerCaseArray); }
-      if (isNumber) {
-        optionsArray.push(numberArray); }
-        and (isSpecialCharacters) 
-          optionsArray.push( specialcharactersArray); }
+//   //Password generates if above conditions are met
+//   if (isUppercase) {
+//     optionsArray.push(upperCaseArray); }
+//     if (isLowerCase) {
+//       optionsArray.push(lowerCaseArray); }
+//       if (isNumber) {
+//         optionsArray.push(numberArray); }
+//         and (isSpecialCharacters) 
+//           optionsArray.push( specialcharactersArray); }
   
 
-function writePassword() {
-}
-var password = generatePassword();
-var passwordText = document.querySelector("#password");{
+// // var password = generatePassword();
+// var passwordText = document.querySelector("#password");{
   
-}
+// }
 
-//Function to generate password for user
-function passwordGenerator () {
-  const randomIndex = Maths.floor(Math.random() * optionsarray.passwordLength);
-  const randomChoice = optionsArray (randomIndex);
+// //Function to generate password for user
+// function passwordGenerator () {
+//   const randomIndex = Maths.floor(Math.random() * optionsarray.passwordLength);
+//   const randomChoice = optionsArray (randomIndex);
 
-  return randomChoice;
-}
-//For Loop
-for (let i =0; i < passwordLength; i++) {
-  let randomResult = randomPasswordGenerator();
-  result.push(randomResult);
-}
-password = result.join("");
-return password;
+//   return randomChoice;
+// }
+// //For Loop
+// for (let i =0; i < passwordLength; i++) {
+//   let randomResult = randomPasswordGenerator();
+//   result.push(randomResult);
+// }
+// password = result.join("");
 
-//Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
+// //Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+
+// // document.getElementById("generate").addEventListener("click", generatePassword)
+// // generatePassword(
+// //   console.log ("piggywiggy")
+// // )
