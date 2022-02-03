@@ -16,3 +16,73 @@ body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
+
+header {
+  text-align: centre;
+  padding-top: 50px;
+  padding:20px;
+  padding-left: 450px;
+  color: rgb(49, 48, 48),
+  
+}
+
+.card {
+background-color: slategray;
+font-size: 20px;
+padding: 30px 15px;
+max-width: 800px;
+margin: 0 auto;
+
+
+}
+
+.card-header {
+  text-align:center
+}
+
+
+.card-body {
+  text-align: center;
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width:100%;
+  background: black;
+  height:2px;
+}
+
+#password {
+  text-align: center;
+  padding: 10px;
+
+}
+
+.wrapper {
+  padding: 50px;
+
+}
+
+button {
+  cursor: default;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+@media (max-width: 690px) {
+    .btn {
+      font-size: medium;
+    }
+}
+
+@media (max-width:500px) {
+  .btn {
+  font-size: small;
+}
+}
