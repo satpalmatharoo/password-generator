@@ -1,22 +1,11 @@
 //Generator functions
-var generateBtn = document.querySelector("#generate");
+ var generateBtn = document.querySelector("#generate");
 
-//lower case letters
-var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz"
-var upperCaseLetters = lowerCaseLetters.toUpperCase();
-//special characters
-var specialCharacters = "&!-£%";
-
-//numbers 1-9
-var numbers = "123456789";
-var charset = lowerCaseLetters;
-document.getElementById("generate").addEventListener("click",generatePasswordCriteria)
+document.getElementById("generate").addEventListener("click",writePassword)
 function writePassword(){
+  console.log("heeeellllllpppp!")
   generatePasswordCriteria();
-  var password = generatePassword ();
-  var passwordText = document.querySelector("#password");
   
-  passwordText.value = password;
 }
 
 
@@ -28,8 +17,8 @@ function generatePasswordCriteria (){
 );
   // Parse the password length we have got from the user
   const passwordLengthParsed = Number.parseInt(passwordLength);
-if (passwordLengthParsed <=7 || passwordLengthParsed >=129) {
-  alert ("piggywiggy");
+if (passwordLengthParsed <7 || passwordLengthParsed >128) {
+   alert ("your password should be between 7-128");
   return;
 } 
 if   (Number.isNaN(passwordLengthParsed))  
@@ -37,96 +26,39 @@ if   (Number.isNaN(passwordLengthParsed))
      alert("Your password length must be a number");
      return;
    }
-
-   // Valid that the password length is in the correct range
    
-const doesIncludeUppercase=confirm ("include uppercase");
-const doesIncludeNumber = confirm ("Include number");
-const doesIncludeSpecialCharacters = confirm ("Include special");
+   var password = "";
+   password += "qwertyuiopasdfghjklzxcvbnm";
 
-//Password generates if above conditions are met
+var doesIncludeUppercase = false
+ doesIncludeUppercase =confirm ("Do you want your password to include an uppercase?");
 if (doesIncludeUppercase) {
-  charaset += upperCaseLetters;
+  password += "QWERTYUIOPASDFGHJKLZXCVBNM"
+  
 }
-if (doesIncludeSpecialCharacters)
-{
-  charset += specialCharacters;
-  }
- }
 
-// Declare variables;
-function generatePassword () {
-
-  var isLowerCase;
-  var isUpperCase;
-  var isNumber;
-  var isSpecialCharacters;
-  var optionsArray;
-  var resultsArray;
-  var password;
+var doesIncludeNumber = false
+ doesIncludeNumber = confirm ("Do you want your password to include a number?");
+if (doesIncludeNumber) {
+  password += "1234567890";
+  
 }
-//Making a password length
 
-// let passwordLength = prompt (
-//   "How long would you like your password to be? Your password needs to be between 7-128 characters"
-// );
-// passwordLength = Number.parseInt(passwordLength)
-// //Setting condition statements if/if/else if
+var doesIncludeSpecialCharacters = false
+ doesIncludeSpecialCharacters = confirm ("Do you want your password to include a special charater?");
+if (doesIncludeSpecialCharacters) {
+  password += "!@#$%^&*(){}[]=<>/,.";
+}
 
-// if (passwordLength < 8) {
-//   alert ("Your password must contain more than 7 characters.");
+
+   var result ="";
+  for (var i = 0; i < passwordLengthParsed; i++) {
+
   
-// }else if (!passwordLength > 128)  {
-//   alert ("Your password can have no more than 128 characters.");
-
-// }
-
-//If conditions are met - generate the users password
-// if (passwordLength >=8 && passwordLength <=128){
-//   isUpperCase ()
-//   console.log ("Please add Uppercase characters")
-//   isLowerCase
-//   console.log ("Please add LowerCase characters")
-//   isNumber
-//   console.log ("Please add a Number")
-//   isSpecialCharacters
-//   console.log ("Please add a Special Character")
-
-//   //Password generates if above conditions are met
-//   if (isUppercase) {
-//     optionsArray.push(upperCaseArray); }
-//     if (isLowerCase) {
-//       optionsArray.push(lowerCaseArray); }
-//       if (isNumber) {
-//         optionsArray.push(numberArray); }
-//         and (isSpecialCharacters) 
-//           optionsArray.push( specialcharactersArray); }
   
+  result += password.charAt(Math.floor(Math.random() * password.length));
+}
 
-// // var password = generatePassword();
-// var passwordText = document.querySelector("#password");{
-  
-// }
+  document.getElementById("password").value = result;
 
-// //Function to generate password for user
-// function passwordGenerator () {
-//   const randomIndex = Maths.floor(Math.random() * optionsarray.passwordLength);
-//   const randomChoice = optionsArray (randomIndex);
-
-//   return randomChoice;
-// }
-// //For Loop
-// for (let i =0; i < passwordLength; i++) {
-//   let randomResult = randomPasswordGenerator();
-//   result.push(randomResult);
-// }
-// password = result.join("");
-
-
-// //Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-// // document.getElementById("generate").addEventListener("click", generatePassword)
-// // generatePassword(
-// //   console.log ("piggywiggy")
-// // )
+ }    
