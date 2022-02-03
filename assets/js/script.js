@@ -3,7 +3,7 @@
 
 document.getElementById("generate").addEventListener("click",writePassword)
 function writePassword(){
-  console.log("heeeellllllpppp!")
+  
   generatePasswordCriteria();
   
 }
@@ -54,8 +54,6 @@ if (doesIncludeSpecialCharacters) {
    var result ="";
   for (var i = 0; i < passwordLengthParsed; i++) {
 
-  
-  
   result += password.charAt(Math.floor(Math.random() * password.length));
 }
 
