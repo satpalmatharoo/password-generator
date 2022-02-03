@@ -9,4 +9,5 @@ A random password generator which uses prompts to validate users password.
 
 
 ## Screenshot
-![image](https://user-images.githubusercontent.com/84681197/151460159-0a7cffe0-7cd6-4237-b61f-a7deb5305f25.png)
+
+<img width="750" alt="2022-02-03 (2)" src="https://user-images.githubusercontent.com/84681197/152447656-2d96cdd4-6259-444f-b78d-a7c66e5d2af1.png">
