@@ -11,7 +11,8 @@ A randomised password generator which uses prompts to validate users password.
 ## Github Link
 https://github.com/satpalmatharoo/password-generator
 
-
+## Deployed at
+https://satpalmatharoo.github.io/password-generator/
 
 ## Screenshot
 
